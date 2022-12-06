@@ -26,9 +26,10 @@ namespace Ejercicio_GitHub
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            if (rbUrgente.Checked)
                 tipoTelegrama = 'u';
-            else tipoTelegrama = 'o';
+            if (rbOrdinario.Checked)
+                tipoTelegrama = 'o';
             //Obtengo el número de palabras que forma el telegrama
             int i = 0, c = 1;
             while (i < textoTelegrama.Length)
